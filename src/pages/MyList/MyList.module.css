@@ -1,0 +1,55 @@
+/* My List Page Styles */
+.container {
+  padding: 110px 4% 60px 4%;
+  min-height: 80vh;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px 16px;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  color: #8c8c8c;
+}
+
+.emptyTitle {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.emptyText {
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  max-width: 420px;
+}
+
+.browseBtn {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.browseBtn:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}

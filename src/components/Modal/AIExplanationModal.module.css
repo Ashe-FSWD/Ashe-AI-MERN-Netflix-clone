@@ -1,0 +1,164 @@
+/* AI Explanation Modal Styles */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3600;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalCard {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  background-color: #181818;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 32px 36px;
+  color: #ffffff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95);
+  animation: slideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #8c8c8c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.closeBtn:hover {
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  background: linear-gradient(135deg, #e50914 0%, #b81d24 100%);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.description {
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.section {
+  background-color: #121212;
+  border: 1px solid #282828;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #54b9c5;
+  margin-bottom: 10px;
+}
+
+.genreList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.genreBarRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+}
+
+.genreLabel {
+  width: 120px;
+  color: #ffffff;
+}
+
+.barTrack {
+  flex: 1;
+  height: 8px;
+  background-color: #282828;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background-color: #e50914;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.genreCount {
+  width: 40px;
+  color: #8c8c8c;
+  text-align: right;
+  font-size: 0.82rem;
+}
+
+.codeBox {
+  background-color: #000000;
+  padding: 12px 14px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.82rem;
+  color: #46d369;
+  line-height: 1.4;
+  overflow-x: auto;
+}

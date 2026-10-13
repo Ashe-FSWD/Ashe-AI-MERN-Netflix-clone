@@ -1,0 +1,101 @@
+/* Footer Container */
+.footer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+  padding: 40px 4% 60px 4%;
+  color: #808080;
+  font-size: 0.82rem;
+  box-sizing: border-box;
+}
+
+/* Social Media Icons Row */
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.socialIcon {
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.socialIcon:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+/* 4-Column Links Grid matching Design 6 */
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 24px;
+  margin-bottom: 30px;
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footerLink {
+  color: #808080;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  color: #b3b3b3;
+}
+
+/* Service Code Button */
+.serviceCodeBtn {
+  background: transparent;
+  border: 1px solid #808080;
+  color: #808080;
+  font-size: 0.78rem;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.serviceCodeBtn:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Copyright Notice */
+.copyright {
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 5% 40px 5%;
+  }
+
+  .linkGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

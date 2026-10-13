@@ -1,0 +1,60 @@
+/* Skeleton Shimmer Styles */
+.skeletonCard {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #181818 0%,
+    #282828 50%,
+    #181818 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeletonRow {
+  padding: 0 4%;
+  margin-bottom: 2.5rem;
+}
+
+.skeletonTitle {
+  width: 180px;
+  height: 24px;
+  border-radius: 4px;
+  background: #222222;
+  margin-bottom: 12px;
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .skeletonGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skeletonGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skeletonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

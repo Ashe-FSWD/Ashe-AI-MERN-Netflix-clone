@@ -1,0 +1,8 @@
+node_modules/
+DEPLOYMENT_AND_CHANGES.md
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+.DS_Store

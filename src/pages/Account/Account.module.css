@@ -1,0 +1,117 @@
+/* Account Page Styles */
+.container {
+  padding: 110px 4% 80px 4%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 80vh;
+  color: #ffffff;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 16px;
+}
+
+.card {
+  background-color: #181818;
+  border: 1px solid #282828;
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profileRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 2px solid #e50914;
+}
+
+.profileInfo h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profileInfo p {
+  color: #a3a3a3;
+  font-size: 0.95rem;
+}
+
+.sectionDivider {
+  height: 1px;
+  background-color: #282828;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.detailLabel {
+  color: #8c8c8c;
+  font-weight: 600;
+}
+
+.detailValue {
+  color: #ffffff;
+}
+
+.actionLink {
+  color: #0071eb;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  text-align: right;
+  font-weight: 500;
+}
+
+.actionLink:hover {
+  text-decoration: underline;
+}
+
+.signOutBtn {
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: #e50914;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.signOutBtn:hover {
+  background-color: #c10711;
+}
+
+@media (max-width: 768px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .actionLink {
+    text-align: left;
+  }
+}

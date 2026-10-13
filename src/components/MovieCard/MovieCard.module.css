@@ -1,0 +1,227 @@
+/* Base Card Container */
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #202020;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+/* Base Thumbnail Poster */
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Fallback Title inside Thumbnail */
+.posterTitleOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 10px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 100%);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Top 10 Badge */
+.topTenBadge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background-color: #e50914;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 2px 5px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* Hover Preview Card matching Design 7 */
+.hoverCard {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.92);
+  width: 320px;
+  background-color: #181818;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.3s ease;
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Trigger hover on card */
+.card:hover .hoverCard {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}
+
+/* Hover Image */
+.hoverImageContainer {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: #111111;
+}
+
+.hoverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover Card Body Content */
+.hoverContent {
+  padding: 12px 14px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Badge (Recently added / Top 10) */
+.badge {
+  align-self: flex-start;
+  background-color: #e50914;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* Hover Title */
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 2px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Circular Button Row */
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.circleBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  background-color: rgba(42, 42, 42, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+.circleBtn:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+}
+
+.circleBtnPrimary {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+}
+
+.circleBtnPrimary:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.circleBtnAdded {
+  border-color: #46d369;
+  color: #46d369;
+}
+
+.moreInfoBtn {
+  margin-left: auto;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Metadata Row */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.matchScore {
+  color: #46d369;
+  font-weight: 700;
+}
+
+.tag {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1px 5px;
+  font-size: 0.72rem;
+  border-radius: 2px;
+  color: #d2d2d2;
+}
+
+.categoryTag {
+  color: #bcbcbc;
+  font-size: 0.8rem;
+}
+
+/* Genres */
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: #e5e5e5;
+  margin-top: 2px;
+}
+
+.dot {
+  color: #646464;
+  margin: 0 2px;
+  font-size: 0.9rem;
+}
+
+/* Mobile & Touch adjustments */
+@media (max-width: 768px) {
+  /* Disable hover popups on small touchscreens to prevent viewport clipping */
+  .hoverCard {
+    display: none;
+  }
+}

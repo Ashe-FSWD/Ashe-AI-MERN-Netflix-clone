@@ -1,0 +1,58 @@
+/* Category View Styles */
+.container {
+  padding: 100px 4% 60px 4%;
+  min-height: 85vh;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.select {
+  background-color: #181818;
+  color: #ffffff;
+  border: 1px solid #444444;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px 16px;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #a3a3a3;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.backBtn:hover {
+  color: #ffffff;
+}

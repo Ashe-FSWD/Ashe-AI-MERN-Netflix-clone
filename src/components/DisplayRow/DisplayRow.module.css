@@ -1,0 +1,17 @@
+/* DisplayRow Container */
+.displayRowContainer {
+  position: relative;
+  z-index: 5;
+  margin-top: -6rem; /* Overlaps smoothly onto the bottom of the hero banner */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .displayRowContainer {
+    margin-top: -3rem;
+    padding-bottom: 2rem;
+  }
+}

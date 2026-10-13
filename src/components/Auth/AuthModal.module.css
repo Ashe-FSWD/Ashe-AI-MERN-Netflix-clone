@@ -1,0 +1,203 @@
+/* Netflix Auth Modal Styles */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3500;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 0.25s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalCard {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 44px 48px;
+  color: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: #8c8c8c;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.closeBtn:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: rgba(22, 22, 22, 0.9);
+  border: 1px solid #333333;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: #ffffff;
+  background-color: #111111;
+}
+
+.input::placeholder {
+  color: #8c8c8c;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  padding: 14px;
+  background-color: #e50914;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.submitBtn:hover {
+  background-color: #c10711;
+  transform: scale(1.01);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #737373;
+  font-size: 0.85rem;
+  margin: 18px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #333333;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.oauthBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.oauthBtn:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-color: #ffffff;
+}
+
+.togglePrompt {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #737373;
+}
+
+.toggleLink {
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.toggleLink:hover {
+  text-decoration: underline;
+}
+
+.errorMessage {
+  background-color: rgba(229, 9, 20, 0.2);
+  border: 1px solid #e50914;
+  color: #ff6b72;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 480px) {
+  .modalCard {
+    padding: 30px 24px;
+  }
+}
